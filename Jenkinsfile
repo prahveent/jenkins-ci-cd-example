@@ -1,9 +1,11 @@
 pipeline {
    agent any
+   tools {nodejs "nodejs-for-react"}
    stages {
       stage('Build') {
          steps {
-            echo 'Hello World'
+            sh 'npm install'
+            sh 'npm run buid'
          }
       }
    }
